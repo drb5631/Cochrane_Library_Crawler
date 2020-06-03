@@ -6,6 +6,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
+import java.net.URL;
 
 public class Noaa {
     
@@ -16,7 +17,7 @@ public class Noaa {
         HttpURLConnection connection = null;
         
         try {
-            URL url = new URL("");
+            URL url = new URL("https://www.ncdc.noaa.gov/cdo-web/access/services/data/v1");
             connection = (HttpURLConnection) url.openConnection();
             connection.getRequestProperty("token", acccessToken);
             BufferedReader br = new BufferedReader(
