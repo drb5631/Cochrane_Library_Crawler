@@ -3,12 +3,16 @@ apply plugin: 'jacoco'
 apply plugin: 'application'
 
 
-mainClassName = 'ConnectionsLab.Main'
+mainClassName = '.Main'
 
 repositories {
     jcenter()
+    flatDir {
+        dir 'libs'
+    }
 }
 
 dependencies {
-   implementation name: 'gson-2.2.4'
+    testImplementation     'junit:junit:4.13'
+    implementation name: 'gson-2.6.2'
 }

@@ -1,5 +1,7 @@
 
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -10,14 +12,18 @@ public class Noaa {
     
     public Noaa() {
         String acccessToken = "hsgVQCUJhguxzaGCZNAqfMqYcZiXcKvA";
-        Gson gson = new Gson();
+        
+        Gson gson = new GsonBuilder()
+                .setPrettyPrinting()
+                .create();
+        
         String response;
         HttpURLConnection connection = null;
         
         try {
-            URL url = new URL("https://www.ncdc.noaa.gov/cdo-web/access/services/data/v1");
+            URL url = new URL("https://www.ncdc.noaa.gov/cdo-web/api/v2/datasets");
             connection = (HttpURLConnection) url.openConnection();
-            connection.getRequestProperty("token", acccessToken);
+            connection.setRequestProperty("token", acccessToken);
             BufferedReader br = new BufferedReader(
                                 new InputStreamReader(connection.getInputStream()));
             response = br.readLine();
