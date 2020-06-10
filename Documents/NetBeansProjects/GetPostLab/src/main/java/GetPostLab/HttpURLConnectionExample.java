@@ -1,11 +1,6 @@
+package GetPostLab;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
-
-/* 
+/*
 Project: Lab 4 Group Work
 Purpose Details: Get and Post
 Course: IST 411
@@ -14,6 +9,12 @@ Date Developed: 6/14/2020
 Last Date Changed: 6/14/2020
 Revision: 1
 */
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 
 public class HttpURLConnectionExample {
 

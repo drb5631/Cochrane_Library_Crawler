@@ -29,7 +29,7 @@ public class MyHttpServer {
             String response = getResponse();
             exchange.sendResponseHeaders(200, response.length());
             OutputStream out = exchange.getResponseBody();
-            out.write(response.toString().getBytes());
+            out.write(response.getBytes());
             out.close();
         }
     }
