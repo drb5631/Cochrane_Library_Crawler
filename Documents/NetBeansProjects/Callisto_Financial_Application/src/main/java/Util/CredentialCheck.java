@@ -22,7 +22,7 @@ public class CredentialCheck {
         try {
             bufferedReader = new BufferedReader(new FileReader(README));
             String line;
-            while ((line = bufferedReader.readLine().trim()) != null) {
+            while ((line = bufferedReader.readLine()) != null) {
                 if (line.equals(username + ", " + password)) {
                     verifiedCredentials = true;
                     break;
