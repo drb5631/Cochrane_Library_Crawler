@@ -11,6 +11,10 @@ public class Customer {
   private LocalDate birthday;
   private String phoneNumber;
   private Identifier id;
+  
+    public Customer(Identifier id, String firstName, String lastName, String middleName, String address, LocalDate birthday, String phoneNumber) {
+        
+    }
 
     public String getFirstName() {
         return firstName;
@@ -66,5 +70,11 @@ public class Customer {
 
     public void setId(Identifier id) {
         this.id = id;
+    }
+    
+    @Override
+    public String toString() {
+        return String.format("%s|%s|%s|%s|%s|%s", 
+                this.firstName, this.lastName, this.middleName, this.address, this.birthday, this.phoneNumber);
     }
 }

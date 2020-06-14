@@ -1,8 +1,6 @@
 package Model;
 
 import Model.LoanRequest.LoanType;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  *
@@ -12,10 +10,10 @@ public class FinancialProfile {
     
   private Identifier id;
   private LoanType loanType;
-  private List<LoanRequest> activeLoans = new ArrayList<LoanRequest>();
+  private Customer customer;
   
-  public FinancialProfile() {
-      
+  public FinancialProfile(Customer customer) {
+      this.customer = customer;
   }
     
   public LoanRequest requestLoan(LoanType loanType, String loanAmaount) {
