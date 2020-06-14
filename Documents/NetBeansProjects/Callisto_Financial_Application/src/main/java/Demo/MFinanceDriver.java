@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author david
+ * 
  */
 public class MFinanceDriver {
 

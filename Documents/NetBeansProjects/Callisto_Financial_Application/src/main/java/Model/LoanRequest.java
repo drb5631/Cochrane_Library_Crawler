@@ -31,7 +31,7 @@ public class LoanRequest {
         
     }
     
-    public LoanRequest(LoanType loanType, LoanStatus loanStatus, String loanAmount) {
+    public LoanRequest(Identifier id, LoanType loanType, LoanStatus loanStatus, String loanAmount) {
     this.id = new Identifier();
     this.dateTimeCreated = LocalDateTime.now();
     this.loanType = loanType;

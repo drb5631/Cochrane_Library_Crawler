@@ -8,7 +8,6 @@ import Model.LoanRequest.LoanType;
  */
 public class FinancialProfile {
     
-  private Identifier id;
   private LoanType loanType;
   private Customer customer;
   
@@ -16,8 +15,8 @@ public class FinancialProfile {
       this.customer = customer;
   }
     
-  public LoanRequest requestLoan(LoanType loanType, String loanAmaount) {
-      return new LoanRequest(loanType, LoanRequest.LoanStatus.PENDING, loanAmaount);
+  public LoanRequest requestLoan(Identifier id, LoanType loanType, String loanAmaount) {
+      return new LoanRequest(id, loanType, LoanRequest.LoanStatus.PENDING, loanAmaount);
       
   }
 }
