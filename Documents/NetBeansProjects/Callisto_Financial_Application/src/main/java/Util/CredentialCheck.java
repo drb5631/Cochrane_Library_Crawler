@@ -7,14 +7,21 @@ import java.io.IOException;
 import java.nio.file.Paths;
 
 /**
- *
- * @author david
+ * A class to check login credentials.
  */
 public class CredentialCheck {
+
     String basePathString = Paths.get("").toAbsolutePath().toString();
     private final String README = basePathString + "\\src\\main\\java\\Demo\\README.txt";
 
-    public boolean verifyCredentials(String username, String password) {   
+    /**
+     * Verifies if customer or employee credentials are correct.
+     *
+     * @param username username to login.
+     * @param password password to login.
+     * @return true if credentials are verified.
+     */
+    public boolean verifyCredentials(String username, String password) {
         BufferedReader bufferedReader;
         boolean verifiedCredentials = false;
 

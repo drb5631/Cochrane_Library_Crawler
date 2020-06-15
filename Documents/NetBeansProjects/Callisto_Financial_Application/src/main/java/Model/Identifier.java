@@ -1,31 +1,51 @@
 package Model;
 
 /**
- *
- * @author david
+ * A class the creates a unique ID for anything that requires it.
  */
-public class Identifier
-{
-  String id;
+public class Identifier {
 
-  public Identifier() {
-    this.generate();
-  }
+    String id;
 
-  private void generate() {
-    this.id = java.util.UUID.randomUUID().toString();
-  }
+    /**
+     * A constructor for generating a new ID.
+     */
+    public Identifier() {
+        this.generate();
+    }
 
-  public String getID() {
-    return id;
-  }
+    /**
+     * Generates a new UUID to represent an object.
+     */
+    private void generate() {
+        this.id = java.util.UUID.randomUUID().toString();
+    }
 
-  public void setID(String id) {
-    this.id = id;
-  }
+    /**
+     * Returns a string representing the generated UUID.
+     *
+     * @return A new ID as a string.
+     */
+    public String getID() {
+        return id;
+    }
 
-  @Override
-  public String toString() {
-    return this.id;
-  }
+    /**
+     * Sets a new ID for an object.
+     *
+     * @param id The string representing the ID.
+     */
+    public void setID(String id) {
+        this.id = id;
+    }
+
+    /**
+     * Returns a string representing the ID.
+     *
+     * @return A string for the UUID.
+     */
+    @Override
+    public String toString() {
+        return this.id;
+    }
 }
