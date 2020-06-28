@@ -9,9 +9,8 @@ public class Customer {
 
     private String firstName;
     private String lastName;
-    private String middleName;
     private Address address;
-    private LocalDate birthday;
+    private String birthday;
     private String phoneNumber;
     private Identifier id;
 
@@ -21,13 +20,17 @@ public class Customer {
      * @param id A customer ID
      * @param firstName A customer's first name.
      * @param lastName A customer's last name.
-     * @param middleName A customer's middle name.
      * @param address A customer's address.
      * @param birthday A customer's birthday.
      * @param phoneNumber A customer's phone number.
      */
-    public Customer(Identifier id, String firstName, String lastName, String middleName, String address, LocalDate birthday, String phoneNumber) {
-
+    public Customer(Identifier id, String firstName, String lastName, Address address, String birthday, String phoneNumber) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.address = address;
+        this.birthday = birthday;
+        this.phoneNumber = phoneNumber;
     }
 
     /**
@@ -67,25 +70,6 @@ public class Customer {
     }
 
     /**
-     * Returns a customer's middle name.
-     *
-     * @return A string representing the customer's middle name.
-     */
-    public String getMiddleName() {
-        return middleName;
-    }
-
-    /**
-     * Sets a customer's middle name.
-     *
-     * @param middleName Sets the string representing the customer's middle
-     * name.
-     */
-    public void setMiddleName(String middleName) {
-        this.middleName = middleName;
-    }
-
-    /**
      * Returns a customer's address.
      *
      * @return Address representing a customer's home address.
@@ -108,7 +92,7 @@ public class Customer {
      *
      * @return A LocalDate representing the customer's birthday.
      */
-    public LocalDate getBirthday() {
+    public String getBirthday() {
         return birthday;
     }
 
@@ -117,7 +101,7 @@ public class Customer {
      *
      * @param birthday Sets the string representing the customer's birthday.
      */
-    public void setBirthday(LocalDate birthday) {
+    public void setBirthday(String birthday) {
         this.birthday = birthday;
     }
 
@@ -165,7 +149,7 @@ public class Customer {
      */
     @Override
     public String toString() {
-        return String.format("%s|%s|%s|%s|%s|%s",
-                this.firstName, this.middleName, this.lastName, this.address, this.birthday, this.phoneNumber);
+        return String.format("%s|%s|%s|%s|%s",
+                this.firstName, this.lastName, this.address, this.birthday, this.phoneNumber);
     }
 }

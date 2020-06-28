@@ -153,7 +153,8 @@ public class LoginUI extends javax.swing.JFrame {
     }//GEN-LAST:event_CreateBtnActionPerformed
 
     private void CancelBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CancelBtnActionPerformed
-        // TODO add your handling code here:
+        this.dispose();
+    // TODO add your handling code here:
     }//GEN-LAST:event_CancelBtnActionPerformed
 
     public JButton getCancelBtn() {

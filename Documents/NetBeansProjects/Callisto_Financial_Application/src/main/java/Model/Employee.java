@@ -9,7 +9,6 @@ public class Employee {
 
     private String firstName;
     private String lastName;
-    private String middleName;
     private Identifier id;
 
     /**
@@ -20,10 +19,9 @@ public class Employee {
      * @param middleName Employee middle name.
      * @param id Employee ID.
      */
-    public Employee(String firstName, String lastName, String middleName, Identifier id) {
+    public Employee(String firstName, String lastName, Identifier id) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.middleName = middleName;
         this.id = id;
     }
 
@@ -64,25 +62,6 @@ public class Employee {
     }
 
     /**
-     * Returns an employee's middle name.
-     *
-     * @return A string representing the employee's middle name.
-     */
-    public String getMiddleName() {
-        return middleName;
-    }
-
-    /**
-     * Sets an employee's middle name.
-     *
-     * @param middleName Sets the string representing the employee's middle
-     * name.
-     */
-    public void setMiddleName(String middleName) {
-        this.middleName = middleName;
-    }
-
-    /**
      * Returns an employee's ID.
      *
      * @return A string representing the employee's ID.
@@ -106,11 +85,7 @@ public class Employee {
      * @return String representing an employee's name.
      */
     public String fullName() {
-        boolean hasMiddle = !StringUtil.isNullOrEmpty(this.middleName);
-
-        String middleInitial = hasMiddle ? (this.middleName.charAt(0) + ". ") : "";
-
-        return String.format("%s %s%s", this.firstName, middleInitial, this.lastName);
+        return String.format("%s %s", this.firstName, this.lastName);
     }
 
     /**
@@ -120,8 +95,8 @@ public class Employee {
      */
     @Override
     public String toString() {
-        return String.format("%s|%s|%s|%s|",
-                this.id, this.firstName, this.middleName, this.lastName);
+        return String.format("%s|%s|%s",
+                this.id, this.firstName, this.lastName);
     }
 
 }
