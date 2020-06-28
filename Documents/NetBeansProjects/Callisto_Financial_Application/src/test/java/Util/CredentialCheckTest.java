@@ -31,16 +31,25 @@ public class CredentialCheckTest {
      * Test of verifyCredentials method, of class CredentialCheck.
      */
     @Test
-    public void testVerifyCredentials() {
-        System.out.println("verifyCredentials");
-        String username = "";
-        String password = "";
+    public void testVerifyCredentials__valid_entry__login_passes() {
+        System.out.println("verifyCredentials - valid login");
+        String username = "employee1";
+        String password = "abc123";
+        CredentialCheck instance = new CredentialCheck();
+        boolean expResult = true;
+        boolean result = instance.verifyCredentials(username, password);
+        assertEquals(expResult, result);
+    }
+    
+    @Test
+    public void testVerifyCredentials__invalid_entry__login_fails() {
+        System.out.println("verifyCredentials - Invalid login");
+        String username = "employee0";
+        String password = "farfignewton";
         CredentialCheck instance = new CredentialCheck();
         boolean expResult = false;
         boolean result = instance.verifyCredentials(username, password);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
-    
 }
