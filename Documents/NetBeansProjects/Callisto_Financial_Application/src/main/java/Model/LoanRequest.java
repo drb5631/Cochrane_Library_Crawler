@@ -6,6 +6,7 @@ import java.time.format.DateTimeFormatter;
 /**
  * A class for creating a loan request.
  */
+
 public class LoanRequest {
 
     private Identifier id;
