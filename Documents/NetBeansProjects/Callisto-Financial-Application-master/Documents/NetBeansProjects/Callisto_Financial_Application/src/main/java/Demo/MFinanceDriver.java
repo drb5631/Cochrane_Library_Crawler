@@ -1,7 +1,6 @@
 package Demo;
 
 import Model.LoanHistory;
-import Util.CredentialCheck;
 import java.util.Scanner;
 
 /**
@@ -13,56 +12,37 @@ public class MFinanceDriver {
     private String menuChoice;
     private Scanner scanner = new Scanner(System.in);
     LoanHistory history = LoanHistory.getInstance();
-
-    /**
-     * Calls the method that displays the app options.
-     */
-    public void beginApp() {
-
-        selectOption();
-
-    }
-
-    /**
-     * Displays the options the user can select and asks them for credentials to
-     * continue.
-     */
-    public void selectOption() {
-        try {
-            do {
-                System.out.println("\n1) Employee Login\n"
-                        + "2) Customer Login\n"
-                        + "3) Exit mFinance\n");
-
-                System.out.print("Choice: ");
-
-                menuChoice = scanner.next();
-
-                switch (menuChoice) {
-                    case "1":
-                        
-                        break;
-                    case "2":
-                        
-                        break;
-                    case "3":
-                        System.out.println("\nGoodbye");
-                        break;
-                    default:
-                        System.err.println("Please enter a valid menu option!");
-                }
-            } while (!"3".equals(menuChoice));
-        } catch (Exception e) {
-            System.out.println("Invalid Option Selected!");
-        }
-    }
+    private String subMenuChoice;
 
     /**
      * Will display a list of options for the employee to interact with customer
      * information.
      */
     public void displayEmployeeOptions() {
-        System.out.println("Not Implemented Yet!");
+        do {
+            System.out.println("1) View Customer Profile");
+            System.out.println("2) View Loan History");
+            System.out.println("3) Perform Credit Check");
+            System.out.println("4) Exit");
+            System.out.print("Choice: ");
+
+            subMenuChoice = scanner.next();
+
+            switch (subMenuChoice) {
+                case "1":
+                    
+                    break;
+                case "2":
+                    
+                    break;
+                case "3":
+                    
+                    break;
+                case "4":
+                    
+                    break;
+            }
+        } while (!subMenuChoice.equals("4"));
     }
 
     /**
@@ -70,7 +50,27 @@ public class MFinanceDriver {
      * make payments.
      */
     public void displayCustomerOptions() {
-        System.out.println("Not Implemented Yet!");
+        do {
+        System.out.println("Request Loan");
+        System.out.println("Make a payment");
+        System.out.println("View My Loan History");
+        System.out.println("4) Exit");
+        System.out.print("Choice: ");
+        
+        subMenuChoice = scanner.next();
+
+            switch (subMenuChoice) {
+                case "1":
+                    break;
+                case "2":
+                    break;
+                case "3":
+                    break;
+                case "4":
+                    break;
+            }
+        
+        } while(!subMenuChoice.equals("4"));
 
     }
 

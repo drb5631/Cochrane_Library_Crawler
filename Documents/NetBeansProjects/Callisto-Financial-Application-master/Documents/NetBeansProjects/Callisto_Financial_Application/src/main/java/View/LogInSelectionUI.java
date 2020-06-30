@@ -188,14 +188,6 @@ public class LogInSelectionUI extends javax.swing.JFrame {
         this.jPanel1 = jPanel1;
     }
 
-    public JTextField getjTextField2() {
-        return jTextField2;
-    }
-
-    public void setjTextField2(JTextField jTextField2) {
-        this.jTextField2 = jTextField2;
-    }
-
     /**
      * @param args the command line arguments
      */
