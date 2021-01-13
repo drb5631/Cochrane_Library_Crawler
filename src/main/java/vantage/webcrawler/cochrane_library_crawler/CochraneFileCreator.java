@@ -51,10 +51,10 @@ public class CochraneFileCreator {
     }
     
     private static String getDateFormat(String date) {
-        String[] characters = date.trim().split(" ");
+        String[] dateItem = date.trim().split(" ");
         String separator = "-";
         String month = "";
-        switch(characters[1]) {
+        switch(dateItem[1]) {
             case "January": month = "01"; break;
             case "February": month = "02"; break;
             case "March": month = "03"; break;
@@ -69,7 +69,7 @@ public class CochraneFileCreator {
             case "December": month = "12"; break;
             default: month = "01";
         }
-        return String.join(separator, characters[2], month, characters[0]);
+        return String.join(separator, dateItem[2], month, dateItem[0]);
     }
 
 }

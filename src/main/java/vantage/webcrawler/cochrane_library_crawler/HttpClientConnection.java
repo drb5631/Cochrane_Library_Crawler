@@ -35,7 +35,7 @@ public class HttpClientConnection {
      */
     public static Document getCochraneURL(String url) throws IOException {
         CookieStore cookieStore = new BasicCookieStore();
-        BasicClientCookie clientCookie = new BasicClientCookie("JSESSIONID", "cspbwgreclprt160z1~A3EB8A960F7B510C35963CDC2B37EB46");
+        BasicClientCookie clientCookie = new BasicClientCookie("JSESSIONID", "cspbwgreclprt160y1~C71DD52F54C807075192608F4DB28465");
         clientCookie.setDomain("www.cochranelibrary.com");
         clientCookie.setPath("/");
         cookieStore.addCookie(clientCookie);
