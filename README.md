@@ -1,5 +1,5 @@
 # Cochrane_Library_Crawler
-A crawler to gather topic reviews on the cochrane Library website.<br />
+A crawler to gather topic reviews on the Cochrane Library website.<br />
 
 To Start Crawler:<br />
 1 - Go To https://www.cochranelibrary.com/cdsr/reviews/topics<br />
