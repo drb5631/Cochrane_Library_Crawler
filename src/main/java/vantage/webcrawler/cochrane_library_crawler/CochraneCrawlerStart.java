@@ -14,7 +14,7 @@ import org.jsoup.select.Elements;
 public class CochraneCrawlerStart {
 
     private static ArrayList<Elements> allTopicReviews = new ArrayList<>();
-    private static String cochraneURL = "https://www.cochranelibrary.com/";
+    private static String cochraneURL = "https://www.cochranelibrary.com/cdsr/reviews/topics";
 
     // ADD UNIQUE JSESSIONID TO HttpClientConnection in BasicClientCookie
     

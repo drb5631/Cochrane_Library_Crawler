@@ -35,8 +35,8 @@ public class CochraneFileCreator {
                             + topic + "|"
                             + e.getElementsByClass("result-title").text() + "|"
                             + e.getElementsByClass("search-result-authors").text() + "|"
-                            + e.getElementsByClass("search-result-date").text()
-                    );
+                            + CochraneFileCreator.getDateFormat(e.getElementsByClass("search-result-date").text()
+                    ));
                     bw.newLine();
                 }
             }
@@ -48,6 +48,28 @@ public class CochraneFileCreator {
         } catch (IOException e) {
         }
 
+    }
+    
+    private static String getDateFormat(String date) {
+        String[] characters = date.trim().split(" ");
+        String separator = "-";
+        String month = "";
+        switch(characters[1]) {
+            case "January": month = "01"; break;
+            case "February": month = "02"; break;
+            case "March": month = "03"; break;
+            case "April": month = "04"; break;
+            case "May": month = "05"; break;
+            case "June": month = "06"; break;
+            case "July": month = "07"; break;
+            case "August": month = "08"; break;
+            case "September": month = "09"; break;
+            case "October": month = "10"; break;
+            case "November": month = "11"; break;
+            case "December": month = "12"; break;
+            default: month = "01";
+        }
+        return String.join(separator, characters[2], month, characters[0]);
     }
 
 }
