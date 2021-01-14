@@ -33,9 +33,9 @@ public class HttpClientConnection {
      * @throws IOException will thrown if we lose a connection or the connection
      * is no longer available
      */
-    public static Document getCochraneURL(String url) throws IOException {
+    public static Document getCochraneURL(String url, String key) throws IOException {
         CookieStore cookieStore = new BasicCookieStore();
-        BasicClientCookie clientCookie = new BasicClientCookie("JSESSIONID", "cspbwgreclprt160y1~C71DD52F54C807075192608F4DB28465");
+        BasicClientCookie clientCookie = new BasicClientCookie("JSESSIONID", key);
         clientCookie.setDomain("www.cochranelibrary.com");
         clientCookie.setPath("/");
         cookieStore.addCookie(clientCookie);
