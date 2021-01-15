@@ -9,7 +9,6 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 /**
- *
  * @author David Richard Blon Jr
  * The starter class for crawling the Cochrane Library and retrieving topic information
  */
@@ -19,16 +18,13 @@ public class CochraneCrawlerStart {
     private static String cochraneURL = "https://www.cochranelibrary.com/cdsr/reviews/topics";
     private static String cookieKey;
 
-    // ADD UNIQUE JSESSIONID TO HttpClientConnection in BasicClientCookie
-    
     public static void main(String[] args) throws IOException {
 
         try {
             Scanner input = new Scanner(System.in);
             System.out.print("Please Enter Your Cookie Key: ");
             cookieKey = input.next();
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             e.getMessage();
         }
 

@@ -1,6 +1,7 @@
 package vantage.webcrawler.cochrane_library_crawler;
 
 import java.io.IOException;
+
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
@@ -9,14 +10,12 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.BasicCookieStore;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
-import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
 import org.apache.http.impl.cookie.BasicClientCookie;
 import org.apache.http.util.EntityUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
 /**
- *
  * @author David Richard Blon Jr A class for taking in a Creating an HTTP
  * connection. That connection will then use the Jsoup library to return a
  * parsed HTML document
@@ -27,11 +26,11 @@ public class HttpClientConnection {
     private static Document appraisingLink;
 
     /**
-     * @author David Richard Blon Jr
      * @param url The URL that needs to be parsed to retrieve its HTML
      * @return Document that allows for HTML parsing
      * @throws IOException will thrown if we lose a connection or the connection
-     * is no longer available
+     *                     is no longer available
+     * @author David Richard Blon Jr
      */
     public static Document getCochraneURL(String url, String key) throws IOException {
         CookieStore cookieStore = new BasicCookieStore();
@@ -46,7 +45,6 @@ public class HttpClientConnection {
             HttpGet request = new HttpGet(url);
             try {
                 HttpResponse response = httpClient.execute(request);
-                //System.out.println(response);
                 int responseStatus = response.getStatusLine().getStatusCode();
                 if (responseStatus == HttpStatus.SC_OK) {
                     HttpEntity entity = response.getEntity();

@@ -36,11 +36,9 @@ public class HtmlParser {
                     if (topicString.contains(chosenTopic)) {
                         foundIndex = 1;
                         break;
-                    }
-                    else if (cochraneTopicIndex > medicalTopics.size() - 1) {
+                    } else if (cochraneTopicIndex > medicalTopics.size() - 1) {
                         cochraneTopicIndex = 1;
-                    }
-                    else {
+                    } else {
                         cochraneTopicIndex++;
                     }
                 }
