@@ -7,4 +7,5 @@ To Start Crawler:<br />
 3 - Copy JSESSIONID Value<br />
 4 - Run CochraneCrawlerStart.java<br />
 5 - Enter JSESSIONID value into promted section after starting the crawler<br />
-6 - Found topic will be in topic speific file names in the "Cochrane_Reviews" folder
+6 - Type in a topic name or part of a topic name to find all the reviews for that requested topic<br />
+7 - Found topic will be in topic speific file names in the "Cochrane_Reviews" folder
