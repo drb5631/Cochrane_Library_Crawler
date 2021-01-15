@@ -32,7 +32,8 @@ public class HtmlParser {
                 Scanner input = new Scanner(System.in);
                 chosenTopic = input.nextLine();
                 for (Element topic : medicalTopics) {
-                    if (topic.text().equalsIgnoreCase(chosenTopic)) {
+                    String topicString = topic.text().toLowerCase();
+                    if (topicString.contains(chosenTopic)) {
                         foundIndex = 1;
                         break;
                     }

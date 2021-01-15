@@ -27,7 +27,6 @@ public class CochraneCrawlerStart {
             Scanner input = new Scanner(System.in);
             System.out.print("Please Enter Your Cookie Key: ");
             cookieKey = input.next();
-            System.out.println("Processing Reviews...");
         }
         catch (Exception e) {
             e.getMessage();
@@ -37,6 +36,7 @@ public class CochraneCrawlerStart {
 
         Element cochraneMedicalTopic = HtmlParser.getCochraneTopic(appraisingLink);
         System.out.println("Topic: " + cochraneMedicalTopic.text());
+        System.out.println("Processing Reviews...");
 
         Document cochraneReviews = HttpClientConnection.getCochraneURL(cochraneMedicalTopic.select("a[href]").attr("href"), cookieKey);
 

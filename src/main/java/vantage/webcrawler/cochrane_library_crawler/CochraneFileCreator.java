@@ -14,7 +14,7 @@ import org.jsoup.select.Elements;
  */
 public class CochraneFileCreator {
     
-    private static String fileToCreate = "Cochrane_Reviews/cochrane_reviews.txt";
+    private static String filePath = "Cochrane_Reviews/";
 
     /**
      * @author David Richard Blon Jr
@@ -22,9 +22,10 @@ public class CochraneFileCreator {
      * @param topic The topic that was chosen to search reviews for
      */
     public static void createFile(ArrayList<Elements> reviews, String topic) {
+        String fileToCreate = topic.toUpperCase().replace(' ', '_');
         System.out.println("File To Write: " + fileToCreate);
-        try (FileWriter file = new FileWriter(fileToCreate);
-                BufferedWriter bw = new BufferedWriter(file)) {
+        try (FileWriter file = new FileWriter(filePath + fileToCreate + "_REVIEWS");
+             BufferedWriter bw = new BufferedWriter(file)) {
             System.out.println("Hit File Writer");
             int reviewCount = 0;
             for (Elements review : reviews) {
