@@ -13,7 +13,6 @@ import org.jsoup.select.Elements;
  */
 public class HtmlParser {
 
-    private static int cochraneTopicIndex = 0;
     private static String chosenTopic;
 
     /**
@@ -23,6 +22,7 @@ public class HtmlParser {
      * @author David Richard Blon Jr
      */
     public static Element getCochraneTopic(Document cochraneTopicPage) {
+         int cochraneTopicIndex = 0;
         Elements medicalTopics = cochraneTopicPage.getElementsByClass("browse-by-list-item");
         try {
             int foundIndex;
